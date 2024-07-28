@@ -33,3 +33,19 @@
         `thread_name` = Thread(target=`func_name`)
         `theread_name`.start()
     
+## 5. from PIL import Image, ImageDraw, ImageFont
+    pip install Pillow
+    image_obj = Image.open(`the path to image.jpg`)
+    draw_obj = ImageDraw.Draw(image)
+    font_obj = ImageFont.turetype(`the path to font.ttf`, size=`int`)  
+    # C:\Windows\Fonts covers all the system fonts could be useful
+    draw_obj.text(`position`, `text`, font=`font_obj`, fill=`color`)
+    image_obj.save(`path`, `type`)   # "jpg" must be "jpeg"
+
+## Tips:
+    -There are 3 way to type the path in Windows:
+        r"C:\Path\to\the\file.ext"
+        "C:\\path\\to\\the\\file.ext"
+        "C:/path/to/the/fiile.ext"
+
+
