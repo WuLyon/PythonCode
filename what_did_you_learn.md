@@ -61,8 +61,10 @@
     output = subprocess.check_output(`command`, shell=True, universal_newlines=True)
 
 More info:
-    [RUNOOB.com]https://www.runoob.com/w3cnote/python3-subprocess.html
-    [csdn.net]https://blog.csdn.net/qq_43331089/article/details/124421661
+
+[RUNOOB.com](https://www.runoob.com/w3cnote/python3-subprocess.html)
+
+[csdn.net](https://blog.csdn.net/qq_43331089/article/details/124421661)
 
 
 ## Tips:
