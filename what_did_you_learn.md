@@ -42,6 +42,29 @@
     draw_obj.text(`position`, `text`, font=`font_obj`, fill=`color`)
     image_obj.save(`path`, `type`)   # "jpg" must be "jpeg"
 
+## 6. subprocess
+    subprocessCompleted_obj = subprocess.run(
+            `command`,                          # Should be in the format like: ['ls', '-a']   
+            shell=True,                         # Could make `command` using string directly
+            check=True,                         # Check if the returncode is 0. if not, raise an error
+            stdout=subprocess.PIPE,             # capture the output with the format of byte
+            stderr=subprocess.PIPE,             # capture the error with the format of byte
+            universal_newlines=True)            # Change the output and error from byte format into string format
+
+    # To get the output, you need to:
+    vars(subprocessCompleted_obj)['stdout']
+
+    # To get the error, you need to:
+    vars(subprocessCompleted_obj)['stderr']
+
+    # For simple usage:
+    output = subprocess.check_output(`command`, shell=True, universal_newlines=True)
+
+More info:
+    [RUNOOB.com]https://www.runoob.com/w3cnote/python3-subprocess.html
+    [csdn.net]https://blog.csdn.net/qq_43331089/article/details/124421661
+
+
 ## Tips:
     -There are 3 way to type the path in Windows:
         r"C:\Path\to\the\file.ext"
