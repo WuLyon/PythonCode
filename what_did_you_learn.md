@@ -66,6 +66,30 @@ More info:
 
 [csdn.net](https://blog.csdn.net/qq_43331089/article/details/124421661)
 
+## 7. random
+    random.shuffle(`list`)                      # Reverse the order of the elements in the list
+
+## 8. file
+    with open('file.txt', 'r') as file:
+        `context` = file.read()                   
+
+    with open('file.txt', 'w') as file:
+        file.write(`context`)
+    
+    file.read()                                 # string
+    file.readlines()                            # list, element with '\n'
+    context.splitlines()                        # list, element is each line of context without '\n'
+
+## 9. string
+    str.strip(), str.lstrip(), str.rstrip()     # remove spaces of string
+    str = '`character`'.join(`string`)
+
+## 10. list
+    list.append(`element`)
+    last_element = list.pop()
+
+
+    
 
 ## Tips:
     -There are 3 way to type the path in Windows:
