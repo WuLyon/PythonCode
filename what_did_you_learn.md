@@ -88,6 +88,70 @@ More info:
     list.append(`element`)
     last_element = list.pop()
 
+## 11. git commmand
+    # 初始化和配置
+    git init                  # 初始化一个新的 Git 仓库
+    git clone <repo-url>      # 克隆一个远程仓库
+    git config --global user.name "Your Name"    # 设置全局用户名
+    git config --global user.email "your.email@example.com"  # 设置全局用户邮箱
+
+    # 状态和日志
+    git status                # 查看工作目录状态
+    git status -sb            # 查看当前分支跟踪的远程分支
+    git log                   # 查看提交历史
+    git log --oneline         # 简洁地查看提交历史
+
+    # 添加和提交
+    git add <file>            # 添加指定文件到暂存区
+    git add .                 # 添加所有文件到暂存区
+    git commit -m "Commit message"   # 提交暂存区的内容
+
+    # 分支管理
+    git branch                # 列出所有本地分支
+    git branch -a             # 列出所有分支（包括远程分支）
+    git branch -vv            # 查看所有本地分支跟踪的远程分支
+    git branch --set-upstream-to=<remote-branch>    # 将本地分支设置为跟踪远程分支
+    git branch <branch-name>  # 创建新分支
+    git branch -d <branch-name> # 删除指定分支
+    git branch -D <branch-name> # 强制删除指定分支
+    git checkout <branch-name>  # 切换到指定分支
+    git checkout -b <branch-name>  # 创建并切换到新分支
+    git merge <branch-name>   # 合并指定分支到当前分支
+
+    # 远程操作
+    git remote -v             # 查看远程仓库
+    git remote add <name> <url>  # 添加远程仓库
+    git remote remove <name>  # 移除远程仓库
+
+    # 获取和推送
+    git fetch                 # 从远程仓库获取更新
+    git pull                  # 获取并合并远程分支的更新
+    git push                  # 推送本地分支到远程仓库
+    git push --set-upstream origin <branch-name>  # 将本地分支设置为跟踪远程分支并推送
+    git push origin --delete <branch-name>  # 删除远程分支
+
+    # 撤销和重置
+    git restore <file>        # 移除未暂存的更改
+    git reset <file>          # 从暂存区移除指定文件
+    git reset --hard          # 重置工作目录和暂存区
+    git reset --hard <commit> # 重置到指定提交
+    git reset --hard <remote-branch> #重置到指定的远程分支
+    git revert <commit>       # 撤销指定提交
+
+    # 查看差异
+    git diff                  # 查看未暂存的更改
+    git diff --cached         # 查看已暂存的更改
+    git diff <branch1> <branch2>  # 比较两个分支之间的差异
+
+    # 清理
+    git clean -f              # 删除未跟踪的文件
+    git clean -fd             # 删除未跟踪的文件和目录
+
+
+
+
+
+
 
     
 
