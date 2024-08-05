@@ -6,10 +6,12 @@
     os.path.abspath(__file__)
     os.path.dirname(__file__)
     os.path.splitext(`filename`)
+    os.path.expanduser('~')
+    os.path.getmtime(`file_path`)
+    os.path.exists(`path`)
     os.rename(`file1`, `file2`)
     os.getcwd()
     os.makedirs()
-    os.exists()
 
 ## 2. argparse
     def get_args():
@@ -27,6 +29,7 @@
 
 ## 3. tkinter
 [tkinter_example](https://github.com/WuLyon/PythonCode/blob/main/Lession3_youtube/set_max_velocity.py)
+
 ## 4. from threading import Thread
     def threading():
         # Call work function
@@ -86,7 +89,21 @@ More info:
 
 ## 10. list
     list.append(`element`)
-    last_element = list.pop()
+    list.insert(`index`, `element`)
+    list.remove(`element`)                      # The first matching element
+    list.pop()                                  # The last element
+    del list[`index`]
+    list.clear()
+    list.index(`element`)                       # The first matching element
+    list.count(`element`)
+    list.sort()                                 # Modify the original list
+    list.sort(reverse=True)
+    sorted(`list`)                              # Generate a new list
+    sorted(`list`, reverse=True)
+    list.reverse()
+    list.copy()
+    len(`list`)
+    list = [x ** 2 for x in range(6)]
 
 ## 11. git commmand
     # 初始化和配置
@@ -147,9 +164,12 @@ More info:
     git clean -f              # 删除未跟踪的文件
     git clean -fd             # 删除未跟踪的文件和目录
 
+## 12. glob moudle
+    zip_files = glob.glob(os.path.join(directory, "*.zip"))
 
-
-
+## 13. time moudle
+    time.time() # 当前时间自纪元(1970/1/1)的秒数
+    time.ctime(`time`) # 转换为可读的时间
 
 
 
