@@ -8,6 +8,21 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(std_msgs REQUIRED)
+find_package(rosidl_default_generators REQUIRED)  # add
+
+set(msg_files                                     # add
+  "msg/CustomMessage.msg"
+)
+
+set(srv_files                                     # add
+  "srv/CustomService.srv"
+)
+
+rosidl_generate_interfaces(${PROJECT_NAME}        # add
+  ${msg_files}
+  ${srv_files}
+  DEPENDENCIES std_msgs
+)
 
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
@@ -21,4 +36,5 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
+ament_export_dependencies(rosidl_default_runtime)  # add
 ament_package()
