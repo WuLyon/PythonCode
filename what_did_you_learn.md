@@ -1,10 +1,11 @@
 # What did you learn
-## 1. os
+## 1. os moudle
     __file__
     os.path.listdir(`dir`)
     os.path.join(`dir`, `filename`)
     os.path.abspath(__file__)
     os.path.dirname(__file__)
+    os.path.basename(`file`)
     os.path.splitext(`filename`)
     os.path.expanduser('~')
     os.path.getmtime(`file_path`)
@@ -12,6 +13,7 @@
     os.rename(`file1`, `file2`)
     os.getcwd()
     os.makedirs()
+    os.remove(`file`)
 
 ## 2. argparse
     def get_args():
@@ -170,10 +172,6 @@ More info:
 ## 13. time moudle
     time.time() # 当前时间自纪元(1970/1/1)的秒数
     time.ctime(`time`) # 转换为可读的时间
-
-
-
-    
 
 ## Tips:
     -There are 3 way to type the path in Windows:
