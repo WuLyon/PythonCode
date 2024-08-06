@@ -15,6 +15,10 @@
     os.makedirs()
     os.remove(`file`)
 
+    os.stat(`file_name`)   # return a os.stat_result object
+        os.stat(`file_name`)[`stat.*`]
+        *: ST_SIZE, ST_ATIME, ST_MTIME, ST_CTIME...
+
 ## 2. argparse
     def get_args():
         parse = argparse.ArgumentParser(
@@ -82,6 +86,7 @@ More info:
         file.write(`context`)
     
     file.read()                                 # string
+    file.readline()                             # read the first line of the file
     file.readlines()                            # list, element with '\n'
     context.splitlines()                        # list, element is each line of context without '\n'
 
@@ -171,7 +176,24 @@ More info:
 
 ## 13. time moudle
     time.time() # 当前时间自纪元(1970/1/1)的秒数
-    time.ctime(`time`) # 转换为可读的时间
+    time.ctime(`time`)  # 转换为可读的时间
+    time.localtime(`time`)  # 转换为struct_time对象
+    time.strftime(`format`, `struct_time`)   # 将 struct_time 对象转换为格式化的时间字符串
+    time.strptime(`string`, `format`)   # 将格式化的时间字符串转换为struct_time 对象
+
+`%d`    日
+`%m`    月
+`%Y`    年
+`%H`    时 24小时制
+`%I`    时 12小时制
+`%M`    分
+`%S`    秒
+`%P`    AM、PM
+`%A`    星期全称
+`%a`    星期简称
+
+## 14. sys moudle
+    sys.exit()  # 0 is defult or you can give another number
 
 ## Tips:
     -There are 3 way to type the path in Windows:
