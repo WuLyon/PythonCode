@@ -16,8 +16,10 @@
     os.remove(`file`)
 
     os.stat(`file_name`)   # return a os.stat_result object
-        os.stat(`file_name`)[`stat.*`]
-        *: ST_SIZE, ST_ATIME, ST_MTIME, ST_CTIME...
+    os.stat(`file_name`).*
+    *: st_size, st_atime, st_mtime, st_birthtime
+    os.stat(`file_name`)[`stat.*`]
+    *: ST_SIZE, ST_ATIME, ST_MTIME, ST_CTIME...
 
 ## 2. argparse
     def get_args():
@@ -182,23 +184,63 @@ More info:
     time.strptime(`string`, `format`)   # 将格式化的时间字符串转换为struct_time 对象
 
 `%d`    日
+
 `%m`    月
+
 `%Y`    年
+
 `%H`    时 24小时制
+
 `%I`    时 12小时制
+
 `%M`    分
+
+
 `%S`    秒
+
 `%P`    AM、PM
+
 `%A`    星期全称
+
 `%a`    星期简称
+
 
 ## 14. sys moudle
     sys.exit()  # 0 is defult or you can give another number
+
+## 15. dict
+    my_dict['key3'] = 'value3'  # 如果键不存在，添加新的键值对；如果键存在，更新对应的值
+    value = my_dict.get('key1')  # 如果键存在，返回对应的值；否则返回None
+    value = my_dict.get('key1', 'default_value')  # 如果键不存在，返回默认值
+    value = my_dict.pop('key1')  # 删除并返回指定键的值
+    value = my_dict.pop('key1', 'default_value')  # 如果键不存在，返回默认值
+    key, value = my_dict.popitem()  # 删除并返回字典中的任意键值对
+    keys = my_dict.keys()  # 返回包含字典所有键的视图对象
+    values = my_dict.values()  # 返回包含字典所有值的视图对象
+    items = my_dict.items()  # 返回包含字典所有键值对的视图对象
+    exists = 'key1' in my_dict  # 如果键存在，返回True；否则返回False
+    my_dict.clear()  # 删除字典中的所有键值对
+    new_dict = my_dict.copy()  # 返回字典的浅复制
+    my_dict.update({'key2': 'new_value2', 'key4': 'value4'})  # 使用另一个字典或键值对更新当前字典
+    value = my_dict.setdefault('key5', 'default_value')  # 如果键存在，返回对应的值；否则添加键并设置默认值
+
+## 16. for
+    fruits = ['apple', 'banana', 'cherry']
+    for index, fruit in enumerate(fruits):
+        print(f"Index {index}: {fruit}")
+
+    names = ['Alice', 'Bob', 'Charlie']
+    ages = [25, 30, 35]
+    for name, age in zip(names, ages):
+        print(f"{name} is {age} years old")
+
+    for number in range(5):
+        print(number)
+    else:
+        print("Loop completed without break")
 
 ## Tips:
     -There are 3 way to type the path in Windows:
         r"C:\Path\to\the\file.ext"
         "C:\\path\\to\\the\\file.ext"
         "C:/path/to/the/fiile.ext"
-
-
