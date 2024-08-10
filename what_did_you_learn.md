@@ -1,5 +1,6 @@
 # What did you learn
-## 1. os moudle
+## 1. os and sys moudle
+### os
     __file__
     os.path.listdir(`dir`)
     os.path.join(`dir`, `filename`)
@@ -9,17 +10,24 @@
     os.path.splitext(`filename`)
     os.path.expanduser('~')
     os.path.getmtime(`file_path`)
+    os.path.getsize(`file_path`)
     os.path.exists(`path`)
     os.rename(`file1`, `file2`)
     os.getcwd()
     os.makedirs()
     os.remove(`file`)
+    os.rmdir(`dir`)
+    os.walk(`dir`)
 
     os.stat(`file_name`)   # return a os.stat_result object
     os.stat(`file_name`).*
     *: st_size, st_atime, st_mtime, st_birthtime
     os.stat(`file_name`)[`stat.*`]
     *: ST_SIZE, ST_ATIME, ST_MTIME, ST_CTIME...
+
+### sys
+    sys.exit()  # 0 is defult or you can give another number
+    argment = sys.argv[1]
 
 ## 2. argparse
     def get_args():
@@ -220,11 +228,7 @@ More info:
 
 `%A`    星期全称
 
-`%a`    星期简称
-
-
-## 14. sys moudle
-    sys.exit()  # 0 is defult or you can give another number
+`%a`    星期简称  
 
 ## 15. dict
     my_dict['key3'] = 'value3'  # 如果键不存在，添加新的键值对；如果键存在，更新对应的值
