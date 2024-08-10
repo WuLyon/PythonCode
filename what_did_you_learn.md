@@ -77,8 +77,26 @@ More info:
 
 [csdn.net](https://blog.csdn.net/qq_43331089/article/details/124421661)
 
-## 7. random
-    random.shuffle(`list`)                      # Reverse the order of the elements in the list
+## 7. math, random, decimal and fractions moudle
+### math
+    + - * / // % **
+    abs(x)  round(x,n)   pow(x, y)  max(x1,x2,...)  min(x1,x2,...)   sum(iterable)
+    math.pi math.e
+    math.sqrt(16)   # 16
+    math.log(100, 10)   # 2
+    math.sin(x) math.cos(x) math.tan(x)
+    math.factorial(x) # x!
+### random
+    random.random() # float 0~1
+    random.randint(a, b) # int a~b include a and b
+    random.choice(`list`)
+    random.sample(range(a, b), n)
+    random.shuffle(`list`)                      # Reverse a random order of the elements in the origin list
+### decimal and fractions
+    from decimal import Decimal
+    from fractions import Fraction
+    a = Deciaml('num')
+    b = Fraction(`x`, `y`)  # x/y
 
 ## 8. file
     with open('file.txt', 'r') as file:
