@@ -230,7 +230,7 @@ More info:
 
 `%a`    星期简称  
 
-## 15. dict
+## 14. dict
     my_dict['key3'] = 'value3'  # 如果键不存在，添加新的键值对；如果键存在，更新对应的值
     value = my_dict.get('key1')  # 如果键存在，返回对应的值；否则返回None
     value = my_dict.get('key1', 'default_value')  # 如果键不存在，返回默认值
@@ -246,7 +246,7 @@ More info:
     my_dict.update({'key2': 'new_value2', 'key4': 'value4'})  # 使用另一个字典或键值对更新当前字典
     value = my_dict.setdefault('key5', 'default_value')  # 如果键存在，返回对应的值；否则添加键并设置默认值
 
-## 16. for
+## 15. for
     fruits = ['apple', 'banana', 'cherry']
     for index, fruit in enumerate(fruits):
         print(f"Index {index}: {fruit}")
