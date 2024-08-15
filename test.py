@@ -5,6 +5,7 @@ import random
 ATK = 100
 t = 1
 rio = 1.1
+calculate_num = 0
 
 def count(hp, atk):
     if hp % atk == 0:
@@ -22,7 +23,9 @@ def compare(t1, t2):
 
 
 def calculate():
-    HP = random.uniform(0, 880)
+    global calculate_num
+    calculate_num += 1
+    HP = random.uniform(0, 1100)
     # HP = 30.02 * ATK
 
 
@@ -55,14 +58,21 @@ def calculate():
 def sum():
     win_1 = 0
     win_2 = 0
-    for i in range(1100):
-        calculate()
-        if calculate() == 1:
+    draw = 0
+    for i in range(1000):
+        result = calculate()
+        if result == 1:
             win_1 += 1
-        elif calculate() == 2:
+        elif result == 2:
             win_2 += 1
+        elif result == 0:
+            draw += 1
     print(f'win_1: {win_1}')
     print(f'win_2: {win_2}')
+    print(f'draw: {draw}')
+    print(f'all: {win_1 + win_2 + draw}')
+    print(f'calculate_num: {calculate_num}')
+
 
     if win_1 > win_2:
         print("win_1")
