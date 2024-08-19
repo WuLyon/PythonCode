@@ -108,7 +108,7 @@ More info:
 
 ## 8. file
     with open('file.txt', 'r') as file:
-        `context` = file.read()                   
+        `context` = file.read()    # Could accpet a parameter of type int indicating the number of bytes to read: `context` = file.read(10)
 
     with open('file.txt', 'w') as file:
         file.write(`context`)
@@ -202,7 +202,8 @@ More info:
 ## 12. glob moudle
     zip_files = glob.glob(os.path.join(directory, "*.zip"))
 
-## 13. time moudle
+## 13. time and datetime moudle
+### time
     time.time() # 当前时间自纪元(1970/1/1)的秒数
     time.ctime(`time`)  # 转换为可读的时间
     time.localtime(`time`)  # 转换为struct_time对象
@@ -229,6 +230,39 @@ More info:
 `%A`    星期全称
 
 `%a`    星期简称  
+### datetime
+```python
+import datetime
+
+# 获取当前日期和时间
+now = datetime.datetime.now()
+print("当前时间：", now)
+
+# 获取当前日期
+today = datetime.date.today()
+print("当前日期：", today)
+
+# 获取当前时间
+current_time = datetime.time.now()
+print("当前时间：", current_time)
+
+# 创建一个指定日期和时间的datetime对象
+dt = datetime.datetime(2022, 12, 31, 23, 59, 59)
+print("指定时间：", dt)
+
+# 使用strftime方法格式化datetime对象为字符串
+formatted_now = now.strftime("%Y-%m-%d %H:%M:%S")
+print("格式化后的时间：", formatted_now)
+
+# 使用strptime方法将字符串解析为datetime对象
+string_to_parse = "2023-07-15 12:30:00"
+parsed_dt = datetime.datetime.strptime(string_to_parse, "%Y-%m-%d %H:%M:%S")
+print("解析后的datetime对象：", parsed_dt)
+
+# 计算时间差（两个datetime对象之间）
+delta = parsed_dt - now
+print("时间差：", delta)
+
 
 ## 14. dict
     my_dict['key3'] = 'value3'  # 如果键不存在，添加新的键值对；如果键存在，更新对应的值
