@@ -112,6 +112,9 @@ More info:
 
     with open('file.txt', 'w') as file:
         file.write(`context`)
+
+    with open('file.txt', 'a') as file:
+        file.write(`context`)
     
     file.read()                                 # string
     file.readline()                             # read the first line of the file
