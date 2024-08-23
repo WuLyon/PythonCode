@@ -298,6 +298,61 @@ print("时间差：", delta)
     else:
         print("Loop completed without break")
 
+## 16. hashlib moudle
+The following code calculates the MD5 value of a specified file.
+```python
+import hashlib
+
+def calculate_md5(file_path):
+    hash_md5 = hashlib.md5()
+    with open(file_path, "rb") as f:
+        chunk_size = 4096
+        while chunk := f.read(chunk_size):
+            hash_md5.update(chunk)
+    return hash_md5.hexdigest()
+```
+
+## 17. zipfile moudle
+zip.py
+```python
+import os
+import zipfile
+
+def zip_directory(folder_path, zip_filename):
+    with zipfile.ZipFile(zip_filename, 'w', zipfile.ZIP_DEFLATED) as zipf:
+        # Add the folder itself first
+        folder_name = os.path.basename(folder_path)
+        zipf.write(folder_path, folder_name)
+        for root, dirs, files in os.walk(folder_path):
+            for file in files:
+                file_path = os.path.join(root, file)
+                # Calculate the relative path
+                rel_path = os.path.relpath(file_path, folder_path)
+                # Add the file to the ZIP file using relative path
+                zipf.write(file_path, os.path.join(folder_name, rel_path))
+
+# Specify the path to be zipped and the name of the generated ZIP file.
+folder_to_zip = 'path/to/directory'
+zip_file_name = 'path/to/file.zip'
+zip_directory(folder_to_zip, zip_file_name)
+print(f'{folder_to_zip} has been compressed to {zip_file_name}')
+```
+
+unzip.py
+```python
+import zipfile
+
+def unzip_file(zip_filename, extract_path):
+    with zipfile.ZipFile(zip_filename, 'r') as zipf:
+        zipf.extractall(extract_path)
+        print(f'{zip_filename} has been extracted to {extract_path}')
+
+# Specify the path of the ZIP file to be unzipped and the destination path for extraction.
+zip_file_to_unzip = '/path/to/file.zip'
+target_extract_path = '/path/to/extract/'
+unzip_file(zip_file_to_unzip, target_extract_path)
+```
+
 ## Tips:
     -There are 3 way to type the path in Windows:
         r"C:\Path\to\the\file.ext"
