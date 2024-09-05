@@ -318,6 +318,19 @@ def calculate_md5(file_path):
 
 [unzip.py](https://github.com/WuLyon/PythonCode/blob/main/Lession11_zipfile/unzip.py)
 
+## 18. shutil moudle
+```python
+import shutil
+
+shutil.copy(src, dst)
+shutil.copy2(src, dst)    # include time data
+shutil.copytree(src_folder, dst_folder)
+shutil.move(src, dst)
+shutil.rmtree(path)
+shutil.make_archive(base_name, format, root_dir)
+shutil.unpack_archive(filename, extract_dir)
+```
+
 ## Tips:
     -There are 3 way to type the path in Windows:
         r"C:\Path\to\the\file.ext"
