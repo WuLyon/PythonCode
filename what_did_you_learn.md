@@ -124,6 +124,11 @@ More info:
 ## 9. string
     str.strip(), str.lstrip(), str.rstrip()     # remove spaces of string
     str = '`character`'.join(`string`)
+    str.split(',')
+    str.isdigit()
+    str.isalpha()
+    str.isupper()
+    str.islower()
 
 ## 10. list
     list.append(`element`)
@@ -336,3 +341,7 @@ shutil.unpack_archive(filename, extract_dir)
         r"C:\Path\to\the\file.ext"
         "C:\\path\\to\\the\\file.ext"
         "C:/path/to/the/fiile.ext"
+    
+    -How to convert betwween binary and decimal:
+        binary_num = bin(decimal_num)   # type(decimal_num) = int
+        decimal_num = int(binary_num, 2)    # type(binary_num) = string
