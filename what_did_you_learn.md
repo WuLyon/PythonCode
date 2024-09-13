@@ -321,6 +321,8 @@ def calculate_md5(file_path):
 [zip.py](https://github.com/WuLyon/PythonCode/blob/main/Lession11_zipfile/zip.py)
 
 
+
+Question: Define a class with a generator 
 [unzip.py](https://github.com/WuLyon/PythonCode/blob/main/Lession11_zipfile/unzip.py)
 
 ## 18. shutil moudle
@@ -336,12 +338,72 @@ shutil.make_archive(base_name, format, root_dir)
 shutil.unpack_archive(filename, extract_dir)
 ```
 
+## 19. re
+**re moudle**
+```python
+import re
+
+# functions
+re.search(format, string)
+re.match(format, string)
+re.findall(format, string)
+re.split(format, string)
+re.sub(format, replacement, string)
+
+# match object
+match.group()
+match.start()
+match.end()
+match.span()
+
+# flags
+re.I # Makes the pattern case-insensitive
+re.M # Allows ^ and $ to match the start and end of each line
+re.S # Makes . match all characters, including newlines
+```
+
+# 20. yield
+```python
+def count_up_to(n):
+    count = 1
+    while count <= n:
+        yield count
+        count += 1
+
+counter = count_up_to(100)
+print(next(counter))
+```
+
+**regular expressions**
+- `\d` match any digit
+- `\w` match any alphanumeric character
+- `\s` match any whitespace
+- `.` match any character except a newline
+- `*` match 0 or more occurrences
+- `+` match 1 or more occurrences
+- `?` match 0 or 1 occurrences
+- `{m, n}` match between m and n occurrences
+- `^` match the beginning of a string
+- `$` match the end of a string
+
+
 ## Tips:
-    -There are 3 way to type the path in Windows:
-        r"C:\Path\to\the\file.ext"
-        "C:\\path\\to\\the\\file.ext"
-        "C:/path/to/the/fiile.ext"
+- There are 3 way to type the path in Windows:
     
-    -How to convert betwween binary and decimal:
-        binary_num = bin(decimal_num)   # type(decimal_num) = int
-        decimal_num = int(binary_num, 2)    # type(binary_num) = string
+    `r"C:\Path\to\the\file.ext"`
+
+    `"C:\\path\\to\\the\\file.ext"`
+
+    `"C:/path/to/the/fiile.ext"`
+    
+- How to convert betwween binary and decimal:
+    
+    `binary_num = bin(decimal_num)   # type(decimal_num) = int`
+    
+    `decimal_num = int(binary_num, 2)    # type(binary_num) = string`
+
+- itemgetter()
+```python
+l = [[name1, age1], [name2, age2], [name3, age3] ... ]
+print(sorted(l, key=itemgetter(0,1)))
+```
