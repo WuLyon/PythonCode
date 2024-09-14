@@ -407,3 +407,12 @@ print(next(counter))
 l = [[name1, age1], [name2, age2], [name3, age3] ... ]
 print(sorted(l, key=itemgetter(0,1)))
 ```
+- remove duplicates in a list
+```python
+# l = [...]
+l = list(set(l))    # no order
+```
+```python
+# l = [...]
+l = list(dict.fromkeys(s))  # keep order
+```
