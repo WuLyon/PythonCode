@@ -10,6 +10,6 @@ s = input().split(' ')
 s.sort()
 s_dict = {}
 for item in s:
+    s = list(dict.fromkeys(s))
 
-s = list(dict.fromkeys(s))
 print(s)
