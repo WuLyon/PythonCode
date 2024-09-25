@@ -416,3 +416,8 @@ l = list(set(l))    # no order
 # l = [...]
 l = list(dict.fromkeys(s))  # keep order
 ```
+- assert
+```python
+# 用于调试
+assert condition, message
+```
