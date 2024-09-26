@@ -129,6 +129,9 @@ More info:
     str.isalpha()
     str.isupper()
     str.islower()
+    To reverse a string:
+    - string = string[::-1]
+    - string = ''.join(reversed(string))
 
 ## 10. list
     list.append(`element`)
@@ -421,3 +424,5 @@ l = list(dict.fromkeys(s))  # keep order
 # 用于调试
 assert condition, message
 ```
+- enumerate()
+return the element and its index in (index, element)
