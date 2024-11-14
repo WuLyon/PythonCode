@@ -185,9 +185,12 @@ More info:
     git remote -v             # 查看远程仓库
     git remote add <name> <url>  # 添加远程仓库
     git remote remove <name>  # 移除远程仓库
+    git remote set-url origin <url> # 修改远程仓库
+
 
     # 获取和推送
     git fetch                 # 从远程仓库获取更新
+    git fetch --all
     git pull                  # 获取并合并远程分支的更新
     git push                  # 推送本地分支到远程仓库
     git push --set-upstream origin <branch-name>  # 将本地分支设置为跟踪远程分支并推送
