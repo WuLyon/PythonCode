@@ -107,19 +107,24 @@ More info:
     b = Fraction(`x`, `y`)  # x/y
 
 ## 8. file
+```python
     with open('file.txt', 'r') as file:
-        `context` = file.read()    # Could accpet a parameter of type int indicating the number of bytes to read: `context` = file.read(10)
-
+        context = file.read()    # Could accpet a parameter of type int indicating the number of bytes to read: `context` = file.read(10)
+```
+```python
     with open('file.txt', 'w') as file:
-        file.write(`context`)
-
+        file.write(context)
+```
+```python
     with open('file.txt', 'a') as file:
-        file.write(`context`)
-    
+        file.write(context)
+```
+```python
     file.read()                                 # string
     file.readline()                             # read the first line of the file
     file.readlines()                            # list, element with '\n'
     context.splitlines()                        # list, element is each line of context without '\n'
+```
 
 ## 9. string
     str.strip(), str.lstrip(), str.rstrip()     # remove spaces of string
@@ -171,6 +176,7 @@ More info:
 
     # 分支管理
     git branch                # 列出所有本地分支
+    git branch -r             # 列出所有远程分支
     git branch -a             # 列出所有分支（包括远程分支）
     git branch -vv            # 查看所有本地分支跟踪的远程分支
     git branch --set-upstream-to=<remote-branch>    # 将本地分支设置为跟踪远程分支
